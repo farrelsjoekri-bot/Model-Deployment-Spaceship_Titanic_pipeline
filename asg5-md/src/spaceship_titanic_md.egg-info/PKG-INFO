@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: spaceship-titanic-md
+Version: 0.1.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.0
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: joblib>=1.3
+Requires-Dist: streamlit>=1.30
+
+# ASG 05 Model Deployment - Farrel - Spaceship Titanic
+
+This repository contains a modular machine learning project for the Spaceship Titanic dataset.
+
+## Project structure
+
+```text
+main/
+├── pyproject.toml
+├── requirements.txt
+├── .streamlit/
+│   └── config.toml
+├── apps/
+│   ├── __init__.py
+│   └── main.py
+├── artifacts/
+│   └── spaceship_titanic_pipeline.pkl
+├── data/
+│   └── raw/
+│       └── train.csv
+└── src/
+    └── spaceship_titanic/
+        ├── __init__.py
+        ├── pipeline.py
+        ├── data/
+        │   ├── __init__.py
+        │   └── ingestion.py
+        ├── features/
+        │   ├── __init__.py
+        │   └── preprocessing.py
+        └── models/
+            ├── __init__.py
+            ├── train.py
+            └── evaluate.py
+```
+
+## How to train the pipeline
+
+```bash
+python -m spaceship_titanic.pipeline
+```
+
+## How to run the app locally
+
+```bash
+streamlit run apps/main.py
+```
